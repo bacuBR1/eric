@@ -42,6 +42,11 @@ server.get("/filmes/:id/:nome", (req, res) => {
     res.json(filmes)
 })
 
+server.get('/buscar', (req, res) => {
+    const nome = req.query.nome
+
+    res.send(`Nome: ${nome}`)
+})
 server.listen(3001, () => {
     console.log("Rodando")
 });
