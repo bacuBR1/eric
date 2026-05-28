@@ -21,6 +21,16 @@ server.get("/erro", (req, res) => {
     res.status(404).send("pagina não encontrada")
 })
 
+server.get("/inicio", (req, res) => {
+    res.redirect('/')
+})
+
+server.get('/usuario/:id', (req, res) => {
+    const id = req.params.id
+
+    res.send(`usuario ${id}`)
+})
+
 server.listen(3001, () => {
     console.log("Rodando")
 });
