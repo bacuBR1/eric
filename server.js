@@ -31,6 +31,11 @@ server.get('/usuario/:id', (req, res) => {
     res.send(`usuario ${id}`)
 })
 
+server.get("/produtos/:nome", (req, res) => {
+    const nome = req.params.nome
+    res.send(nome)
+})
+
 server.listen(3001, () => {
     console.log("Rodando")
 });
