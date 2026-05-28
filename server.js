@@ -54,6 +54,12 @@ server.get("/produtos2", (req, res) => {
     res.json(produtos)
 })
 
+server.get('/usuarios', (req, res) => {
+    const idade = req.query.idade;
+
+    res.send(`filtrando por idade ${idade}`)
+})
+
 
 server.listen(3001, () => {
     console.log("Rodando")
