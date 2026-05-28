@@ -17,6 +17,10 @@ server.get('/3', (req, res) => {
         })
 })
 
+server.get("/erro", (req, res) => {
+    res.status(404).send("pagina não encontrada")
+})
+
 server.listen(3001, () => {
     console.log("Rodando")
 });
