@@ -36,6 +36,12 @@ server.get("/produtos/:nome", (req, res) => {
     res.send(nome)
 })
 
+server.get("/filmes/:id/:nome", (req, res) => {
+    const filmes = {id:req.params.id, nome:req.params.nome}
+
+    res.json(filmes)
+})
+
 server.listen(3001, () => {
     console.log("Rodando")
 });
