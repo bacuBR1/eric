@@ -47,6 +47,14 @@ server.get('/buscar', (req, res) => {
 
     res.send(`Nome: ${nome}`)
 })
+
+server.get("/produtos2", (req, res) => {
+    const produtos = {categoria: req.query.categoria, pagina: req.query.pagina}
+
+    res.json(produtos)
+})
+
+
 server.listen(3001, () => {
     console.log("Rodando")
 });
