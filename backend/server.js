@@ -60,6 +60,22 @@ server.get('/usuarios', (req, res) => {
     res.send(`filtrando por idade ${idade}`)
 })
 
+server.get("/filme", (req, res) => {
+    const filme = [{
+        nome: "Vingadores",
+        ano: 2012,
+        diretor: "Joss Whedon"
+    }, {
+        nome: "Homem-Aranha: Sem Volta Para Casa",
+        ano: 2021,
+        diretor: "Jon Watts"
+    }, {
+        nome: "Batman: O Cavaleiro das Trevas",
+        ano: 2008,
+        diretor: "Christopher Nolan"
+    }]
+    res.json(filme)
+})
 
 server.listen(3002, () => {
     console.log("Rodando")
